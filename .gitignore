@@ -1,4 +1,11 @@
-*svn*
 
 *bin/*
-*target*
+target
+*/target/*
+*/target/**
+simpleDemo/target
+simpleDemo/.settings/*
+simpleDemo/target
+
+*.class
+*.jar

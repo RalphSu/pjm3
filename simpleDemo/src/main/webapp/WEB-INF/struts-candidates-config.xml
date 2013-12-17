@@ -5,8 +5,7 @@
 		"http://struts.apache.org/dtds/struts-config_1_2.dtd">
 
 <struts-config>
-	
-	
+
 	<form-beans>
 		<form-bean name="challengeQueryForm" type="org.apache.struts.action.DynaActionForm">
 		</form-bean>
@@ -14,7 +13,7 @@
 
 	<action-mappings type="org.apache.struts.action.ActionMapping">
 		<action path="/candidates/list" name="challengeQueryForm" validate="false"
-			type="org.ttjhome.html.struts.candidate.CandidatesAction"  parameter="action">
+			type="org.pjm.html.struts.candidate.CandidatesAction"  parameter="action">
 			<forward name="success" path=".candidates.list" />
 		</action>
 	</action-mappings>

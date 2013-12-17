@@ -1,5 +1,0 @@
-<div >
-
-  		 <%= "List sidebar" %>
-	
-</div>
