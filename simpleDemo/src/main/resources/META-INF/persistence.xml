@@ -9,6 +9,7 @@
 
 		<class>org.pjm.model.Project</class>
 		<class>org.pjm.model.User</class>
+		<class>org.pjm.model.Role</class>
 
 		<properties>
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" />

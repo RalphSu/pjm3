@@ -5,12 +5,14 @@ package org.pjm.model;
 
 import java.sql.Timestamp;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -34,6 +36,9 @@ public class User {
 	@Column(name = "user_type")
 	private String userType;
 
+	@OneToMany(mappedBy = "user")
+	private List<Membership> memberships;
+
 	private Boolean client;
 	@Column(name = "created_on")
 	private Date createdOn;
@@ -42,6 +47,14 @@ public class User {
 
 	@Column(name = "hashed_password")
 	private String hashedPassword;
+
+	public List<Membership> getMemberships() {
+		return memberships;
+	}
+
+	public void setMemberships(List<Membership> memberships) {
+		this.memberships = memberships;
+	}
 
 	public Long getId() {
 		return id;

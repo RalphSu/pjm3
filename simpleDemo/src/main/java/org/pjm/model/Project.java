@@ -1,6 +1,7 @@
 package org.pjm.model;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,7 +9,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -33,8 +35,8 @@ public class Project {
 	@Column(name = "end_time")
 	private Date endTime;
 
-	@OneToOne
-	@JoinColumn(name = "client", nullable = true)
+	@ManyToOne
+	@JoinColumn(name = "client_id", nullable = true)
 	private User client;
 
 	@Column(name = "created_on")
@@ -48,6 +50,9 @@ public class Project {
 
 	@Column
 	private Integer status;
+
+	@OneToMany(mappedBy = "project")
+	private List<Membership> members;
 
 	public Long getId() {
 		return id;
