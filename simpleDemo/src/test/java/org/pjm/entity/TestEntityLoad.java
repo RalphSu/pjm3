@@ -40,7 +40,7 @@ public class TestEntityLoad extends TestCase {
 	}
 	
 	public void testLoad() {
-		
+//		manager.createQuery(criteriaQuery);
 	}
 
 }
